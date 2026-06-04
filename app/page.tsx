@@ -31,7 +31,7 @@ const projects = [
     link: "https://satomi-pi.vercel.app/",
     status: "Sedang dijalani",
     description:
-      "Aplikasi berbasis web yang sedang dikembangkan untuk kebutuhan produktivitas dan integrasi fitur modern berbasis web.",
+      "Aplikasi AI untuk manajemen keuangan berbasis gamification dan chat, dengan fitur modern untuk membantu pengguna mengelola kebiasaan finansial secara lebih interaktif.",
     tags: ["Next.js", "Web App", "AI-ready", "Vercel"],
     accent: "cyan",
     image: "/projects/satomi.webp",
