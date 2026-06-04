@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MobileBottomNav } from "./mobile-bottom-nav";
 
 const profileItems = [
@@ -286,43 +287,45 @@ export default function Home() {
               href={project.link}
               target="_blank"
               rel="noreferrer"
-              className="specular-border group relative flex min-h-[430px] flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-surface-card p-4 shadow-card transition duration-300 hover:-translate-y-1 hover:border-primary/40"
+              className="glass-card specular-border group flex flex-col overflow-hidden rounded-[2rem] p-5 transition duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-white/[0.08]"
             >
-              <div
-                className="absolute inset-0 bg-cover bg-center opacity-100 brightness-110 saturate-125 transition duration-500 group-hover:scale-105 group-hover:brightness-125"
-                style={{ backgroundImage: `url(${project.image})` }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-[#071226]/15 to-[#071226]/72" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(138,235,255,0.20),transparent_34%)]" />
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <h3 className="font-display text-2xl font-bold leading-snug text-white">
+                  {project.name}
+                </h3>
+                <span
+                  className={`shrink-0 rounded-full border px-3 py-1 font-mono text-xs ${accentClasses(
+                    project.accent,
+                  )}`}
+                >
+                  {project.status}
+                </span>
+              </div>
 
-              <div className="relative mt-auto rounded-[1.5rem] border border-white/[0.14] bg-[#071226]/80 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.34)] backdrop-blur-md">
-                <div className="mb-4 flex items-start justify-between gap-4">
-                  <h3 className="font-display text-2xl font-extrabold leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]">
-                    {project.name}
-                  </h3>
-                  <span
-                    className={`shrink-0 rounded-full border px-3 py-1 font-mono text-xs shadow-[0_8px_24px_rgba(0,0,0,0.22)] ${accentClasses(
-                      project.accent,
-                    )}`}
-                  >
-                    {project.status}
-                  </span>
-                </div>
-                <p className="leading-7 text-slate-100/90">{project.description}</p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
+              <div className="mb-5 overflow-hidden rounded-2xl border border-white/10 bg-background/40">
+                <Image
+                  src={project.image}
+                  alt={`Tampilan proyek ${project.name}`}
+                  width={640}
+                  height={360}
+                  className="h-32 w-full object-cover object-top brightness-110 saturate-125 transition duration-300 group-hover:scale-[1.03] sm:h-36"
+                />
+              </div>
+
+              <p className="leading-7 text-muted">{project.description}</p>
+              <div className="mt-auto flex flex-wrap gap-2 pt-6">
+                {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-xl border border-white/[0.14] bg-black/[0.34] px-3 py-2 font-mono text-xs font-semibold text-slate-100/90 backdrop-blur"
+                    className="rounded-xl border border-white/10 bg-background/60 px-3 py-2 font-mono text-xs text-muted"
                   >
                     {tag}
                   </span>
-                  ))}
-                </div>
-                <span className="mt-6 inline-flex font-semibold text-primary transition group-hover:translate-x-1">
-                  Buka proyek
-                </span>
+                ))}
               </div>
+              <span className="mt-6 inline-flex font-semibold text-primary transition group-hover:translate-x-1">
+                Buka proyek
+              </span>
             </a>
           ))}
         </div>
