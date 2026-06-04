@@ -1,3 +1,5 @@
+import { MobileBottomNav } from "./mobile-bottom-nav";
+
 const profileItems = [
   ["Nama", "Hamzah Fadillah"],
   ["Program Studi", "Sistem Informasi"],
@@ -31,6 +33,7 @@ const projects = [
       "Aplikasi berbasis web yang sedang dikembangkan untuk kebutuhan produktivitas dan integrasi fitur modern berbasis web.",
     tags: ["Next.js", "Web App", "AI-ready", "Vercel"],
     accent: "cyan",
+    image: "/projects/satomi.webp",
   },
   {
     name: "Absensi TK Bina Insan Kreatif",
@@ -40,6 +43,7 @@ const projects = [
       "Website absensi untuk kebutuhan guru dan admin, mencakup pencatatan kehadiran siswa/guru serta rekap data.",
     tags: ["PHP", "MySQL", "Tailwind CSS", "Dashboard"],
     accent: "green",
+    image: "/projects/absensi-tk-bina-insan-kreatif.webp",
   },
   {
     name: "Mountain Rose Leather",
@@ -49,6 +53,7 @@ const projects = [
       "Website katalog/toko online untuk brand tas kulit dengan tampilan elegan dan struktur produk.",
     tags: ["Next.js", "Ecommerce", "Product Catalog", "Vercel"],
     accent: "violet",
+    image: "/projects/mountain-rose-leather.webp",
   },
 ];
 
@@ -77,17 +82,17 @@ function accentClasses(accent: string) {
 
 export default function Home() {
   return (
-    <main className="relative isolate overflow-hidden">
+    <main className="relative isolate overflow-hidden pb-24 md:pb-0">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-background/75 backdrop-blur-xl">
         <nav
           className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 sm:px-8"
           aria-label="Navigasi utama"
         >
           <a href="#beranda" className="flex items-center gap-3">
-            <span className="grid size-11 place-items-center rounded-2xl border border-primary/30 bg-primary/10 font-[var(--font-sora)] text-lg font-extrabold text-primary shadow-glow">
+            <span className="grid size-11 place-items-center rounded-2xl border border-primary/30 bg-primary/10 font-display text-lg font-extrabold text-primary shadow-glow">
               HF
             </span>
-            <span className="hidden font-[var(--font-sora)] text-sm font-bold text-white sm:inline">
+            <span className="hidden font-display text-sm font-bold text-white sm:inline">
               Hamzah Fadillah
             </span>
           </a>
@@ -120,12 +125,12 @@ export default function Home() {
         className="mx-auto grid min-h-screen max-w-6xl items-center gap-10 px-5 pb-20 pt-32 sm:px-8 lg:grid-cols-[1.08fr_0.92fr]"
       >
         <div>
-          <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-green/30 bg-green/10 px-4 py-2 font-[var(--font-mono)] text-sm text-green">
+          <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-green/30 bg-green/10 px-4 py-2 font-mono text-sm text-green">
             <span className="size-2 rounded-full bg-green shadow-[0_0_18px_rgba(104,245,184,0.85)]" />
             Portfolio Web Developer Intern
           </div>
 
-          <h1 className="max-w-4xl font-[var(--font-sora)] text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-4xl font-display text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
             Membangun web yang rapi, adaptif, dan berorientasi solusi.
           </h1>
 
@@ -154,14 +159,14 @@ export default function Home() {
 
         <aside className="glass-card specular-border rounded-[2rem] p-6 sm:p-8">
           <div className="mb-7 flex items-center gap-5">
-            <div className="grid size-20 shrink-0 place-items-center rounded-[1.75rem] border border-primary/40 bg-primary/10 font-[var(--font-sora)] text-3xl font-extrabold text-primary shadow-glow">
+            <div className="grid size-20 shrink-0 place-items-center rounded-[1.75rem] border border-primary/40 bg-primary/10 font-display text-3xl font-extrabold text-primary shadow-glow">
               HF
             </div>
             <div>
-              <p className="font-[var(--font-mono)] text-sm text-green">
+              <p className="font-mono text-sm text-green">
                 Open for Intern
               </p>
-              <h2 className="mt-1 font-[var(--font-sora)] text-2xl font-bold text-white">
+              <h2 className="mt-1 font-display text-2xl font-bold text-white">
                 Hamzah Fadillah
               </h2>
             </div>
@@ -169,25 +174,25 @@ export default function Home() {
 
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-4">
-              <p className="font-[var(--font-mono)] text-xs uppercase text-primary">
+              <p className="font-mono text-xs uppercase text-primary">
                 Program Studi
               </p>
               <p className="mt-2 font-semibold text-white">Sistem Informasi</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-4">
-              <p className="font-[var(--font-mono)] text-xs uppercase text-primary">
+              <p className="font-mono text-xs uppercase text-primary">
                 Fokus
               </p>
               <p className="mt-2 font-semibold text-white">Web & AI</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-4">
-              <p className="font-[var(--font-mono)] text-xs uppercase text-primary">
+              <p className="font-mono text-xs uppercase text-primary">
                 Area
               </p>
               <p className="mt-2 font-semibold text-white">Jabodetabek</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-4">
-              <p className="font-[var(--font-mono)] text-xs uppercase text-primary">
+              <p className="font-mono text-xs uppercase text-primary">
                 GitHub
               </p>
               <p className="mt-2 font-semibold text-white">hamuzasan</p>
@@ -199,10 +204,10 @@ export default function Home() {
       <section id="tentang" className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <p className="font-[var(--font-mono)] text-sm uppercase text-primary">
+            <p className="font-mono text-sm uppercase text-primary">
               Tentang
             </p>
-            <h2 className="mt-3 font-[var(--font-sora)] text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
               Profil singkat
             </h2>
           </div>
@@ -222,7 +227,7 @@ export default function Home() {
                   key={label}
                   className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"
                 >
-                  <dt className="font-[var(--font-mono)] text-xs uppercase text-primary">
+                  <dt className="font-mono text-xs uppercase text-primary">
                     {label}
                   </dt>
                   <dd className="mt-2 font-semibold text-white">{value}</dd>
@@ -234,17 +239,17 @@ export default function Home() {
       </section>
 
       <section id="keahlian" className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
-        <p className="font-[var(--font-mono)] text-sm uppercase text-green">
+        <p className="font-mono text-sm uppercase text-green">
           Keahlian
         </p>
-        <h2 className="mt-3 font-[var(--font-sora)] text-3xl font-bold text-white sm:text-4xl">
+        <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
           Tools dan teknologi
         </h2>
         <div className="mt-8 flex flex-wrap gap-3">
           {skills.map((skill, index) => (
             <span
               key={skill}
-              className={`rounded-2xl border px-4 py-3 font-[var(--font-mono)] text-sm transition hover:-translate-y-0.5 ${
+              className={`rounded-2xl border px-4 py-3 font-mono text-sm transition hover:-translate-y-0.5 ${
                 index % 3 === 0
                   ? "border-primary/30 bg-primary/10 text-primary"
                   : index % 3 === 1
@@ -261,10 +266,10 @@ export default function Home() {
       <section id="proyek" className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
         <div className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
-            <p className="font-[var(--font-mono)] text-sm uppercase text-primary">
+            <p className="font-mono text-sm uppercase text-primary">
               Proyek
             </p>
-            <h2 className="mt-3 font-[var(--font-sora)] text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
               Portfolio pilihan
             </h2>
           </div>
@@ -281,32 +286,37 @@ export default function Home() {
               href={project.link}
               target="_blank"
               rel="noreferrer"
-              className="glass-card specular-border group flex min-h-[330px] flex-col rounded-[2rem] p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-white/[0.08]"
+              className="glass-card specular-border group relative flex min-h-[330px] flex-col overflow-hidden rounded-[2rem] p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-white/[0.08]"
             >
-              <div className="mb-6 flex items-start justify-between gap-4">
-                <h3 className="font-[var(--font-sora)] text-2xl font-bold leading-snug text-white">
+              <div
+                className="absolute inset-0 bg-cover bg-center opacity-[0.18] transition duration-300 group-hover:scale-105 group-hover:opacity-25"
+                style={{ backgroundImage: `url(${project.image})` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#111a2f]/70 via-[#111a2f]/90 to-[#0b1326]" />
+              <div className="relative mb-6 flex items-start justify-between gap-4">
+                <h3 className="font-display text-2xl font-bold leading-snug text-white">
                   {project.name}
                 </h3>
                 <span
-                  className={`shrink-0 rounded-full border px-3 py-1 font-[var(--font-mono)] text-xs ${accentClasses(
+                  className={`shrink-0 rounded-full border px-3 py-1 font-mono text-xs ${accentClasses(
                     project.accent,
                   )}`}
                 >
                   {project.status}
                 </span>
               </div>
-              <p className="leading-7 text-muted">{project.description}</p>
-              <div className="mt-auto flex flex-wrap gap-2 pt-8">
+              <p className="relative leading-7 text-muted">{project.description}</p>
+              <div className="relative mt-auto flex flex-wrap gap-2 pt-8">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-xl border border-white/10 bg-background/60 px-3 py-2 font-[var(--font-mono)] text-xs text-muted"
+                    className="rounded-xl border border-white/10 bg-background/60 px-3 py-2 font-mono text-xs text-muted"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              <span className="mt-6 inline-flex font-semibold text-primary transition group-hover:translate-x-1">
+              <span className="relative mt-6 inline-flex font-semibold text-primary transition group-hover:translate-x-1">
                 Buka proyek
               </span>
             </a>
@@ -316,10 +326,10 @@ export default function Home() {
 
       <section id="kontak" className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
         <div className="glass-card specular-border rounded-[2rem] p-8 text-center sm:p-12">
-          <p className="font-[var(--font-mono)] text-sm uppercase text-green">
+          <p className="font-mono text-sm uppercase text-green">
             Kontak
           </p>
-          <h2 className="mx-auto mt-4 max-w-3xl font-[var(--font-sora)] text-3xl font-bold text-white sm:text-5xl">
+          <h2 className="mx-auto mt-4 max-w-3xl font-display text-3xl font-bold text-white sm:text-5xl">
             Tertarik berdiskusi untuk internship?
           </h2>
           <div className="mt-6 space-y-2 text-muted">
@@ -356,10 +366,10 @@ export default function Home() {
 
       <footer className="border-t border-white/10 px-5 py-8 sm:px-8">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-sm text-muted sm:flex-row">
-          <span className="font-[var(--font-sora)] text-lg font-extrabold text-primary">
+          <span className="font-display text-lg font-extrabold text-primary">
             HF
           </span>
-          <p>© 2026 Hamzah Fadillah. Built with Next.js and Tailwind CSS.</p>
+          <p>Copyright 2026 Hamzah Fadillah. Built with Next.js and Tailwind CSS.</p>
           <div className="flex gap-5">
             <a
               href={github}
@@ -375,6 +385,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <MobileBottomNav />
     </main>
   );
 }
